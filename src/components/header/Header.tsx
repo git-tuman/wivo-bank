@@ -1,35 +1,29 @@
-import { useCallback, useState } from "react";
 import useIsMobile from "../../hooks/useIsMobile";
 import LogoHeader from "./LogoHeader";
-import { GET_STARTED } from "../../constants";
+import { GET_STARTED, MOB, SIZE } from "../../constants";
 import MenuButton from "./MenuButton";
-import BurgerMenu from "./BurgerMenu";
 import Navigation from "./Navigation";
-import Button from "./Button";
+import ButtonTertiary from "../shared/ButtonTertiary";
 
-const Header = () => {
+const Header = ({
+  callback,
+  menuOpen,
+}: {
+  callback: () => void;
+  menuOpen: boolean;
+}) => {
   const isMobile = useIsMobile();
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const handleClick = useCallback(() => setMenuOpen((s) => !s), []);
-
   return (
-    <div className="header">
+    <div className={`header ${isMobile && MOB}`}>
       <LogoHeader />
 
-      {isMobile && (
-        <>
-          <MenuButton callback={handleClick} open={menuOpen} />
-
-          <BurgerMenu callback={handleClick} menuOpen={menuOpen} />
-        </>
-      )}
+      {isMobile && <MenuButton callback={callback} open={menuOpen} />}
 
       <div className="container-nav-and-btn">
         {!isMobile && <Navigation />}
 
-        <Button value={GET_STARTED} />
+        <ButtonTertiary size={isMobile ? SIZE.S : SIZE.M} value={GET_STARTED} />
       </div>
     </div>
   );

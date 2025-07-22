@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { COPYRIGHT } from "../../constants";
+import { ACTIVE, COPYRIGHT } from "../../constants";
 import Navigation from "./Navigation";
 
 interface BurgMenu {
@@ -10,9 +10,12 @@ interface BurgMenu {
 const BurgerMenu = memo(({ callback, menuOpen }: BurgMenu) => {
   return (
     <>
-      <div className={`menu-overlay ${menuOpen && "active"}`} />
+      <div
+        className={`menu-overlay ${menuOpen && ACTIVE}`}
+        onClick={callback}
+      />
 
-      <div className={`menu-mob ${menuOpen && "active"}`}>
+      <div className={`menu ${menuOpen && ACTIVE}`}>
         {<Navigation callback={callback} />}
 
         <footer className="disclaimer">
