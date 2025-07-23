@@ -14,3 +14,9 @@ export interface Btn {
 export interface BtnPrimary extends Btn {
   color: (typeof COLOR)[keyof typeof COLOR];
 }
+
+export interface Company {
+  name: string;
+  logo: string;
+  link: string;
+}

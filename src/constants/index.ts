@@ -1,10 +1,21 @@
-import { Nav } from "../types";
+import { Company, Nav } from "../types";
+import BonoLogo from "../assets/bono_logo.svg";
 
 export const listNav: Nav[] = [
   { value: "Card", href: "#Card" },
   { value: "App", href: "#App" },
   { value: "Customize", href: "#Customize" },
   { value: "FAQs", href: "#FAQs" },
+];
+
+export const LINK_BONO = "https://www.bono.digital";
+
+export const LIST_COMPANIES: Company[] = [
+  { name: "Bono", logo: BonoLogo, link: LINK_BONO },
+  { name: "Bono", logo: BonoLogo, link: LINK_BONO },
+  { name: "Bono", logo: BonoLogo, link: LINK_BONO },
+  { name: "Bono", logo: BonoLogo, link: LINK_BONO },
+  { name: "Bono", logo: BonoLogo, link: LINK_BONO },
 ];
 
 export const HERO = "Hero";
@@ -22,7 +33,6 @@ export const COLOR = {
   BLACK: "black",
 };
 
-export const LINK_BONO = "https://www.bono.digital";
 export const MARQUEE_PARAGRAPH = "Used by the world's most amazing companies";
 
 export const COPYRIGHT = "Ⓒ 2025 WIVO Finance Inc. All rights reserved.";
