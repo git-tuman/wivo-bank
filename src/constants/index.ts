@@ -8,7 +8,6 @@ export const listNav: Nav[] = [
 ];
 
 export const HERO = "hero";
-export const MOB = "mob";
 
 export const ACTIVE = "active";
 
@@ -30,4 +29,4 @@ export const MAIN_HEADING = "Your future revolutionary banking";
 export const HERO_PARAGRAPH =
   "Introducing our innovative banking website that we can design for your unique needs. Offering both physical and virtual debit cards in addition to a user-friendly banking app. Create your personalized site with customized functionalities today.";
 export const HERO_PARAGRAPH_MOB =
-  "Introducing our innovative banking website that we can design for your unique needs";
+  "Introducing our innovative website featuring customized banking solutions that we can tailor to your unique needs";

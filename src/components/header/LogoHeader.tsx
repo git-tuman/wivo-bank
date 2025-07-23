@@ -2,7 +2,7 @@ import useIsMobile from "../../hooks/useIsMobile";
 import logoHeader from "../../assets/logo-header.svg";
 import logoHeaderMob from "../../assets/logo-header-mob.svg";
 import { useCallback } from "react";
-import { HERO, MOB } from "../../constants";
+import { HERO } from "../../constants";
 
 const LogoHeader = () => {
   const isMobile = useIsMobile();
@@ -15,7 +15,7 @@ const LogoHeader = () => {
     <img
       src={isMobile ? logoHeaderMob : logoHeader}
       alt="logo WIVO Bank"
-      className={`logo-header ${isMobile && MOB}`}
+      className="logo-header"
       onClick={handleClick}
     />
   );

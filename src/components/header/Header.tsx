@@ -1,6 +1,6 @@
 import useIsMobile from "../../hooks/useIsMobile";
 import LogoHeader from "./LogoHeader";
-import { GET_STARTED, MOB, SIZE } from "../../constants";
+import { GET_STARTED, SIZE } from "../../constants";
 import MenuButton from "./MenuButton";
 import Navigation from "./Navigation";
 import ButtonTertiary from "../shared/ButtonTertiary";
@@ -15,7 +15,7 @@ const Header = ({
   const isMobile = useIsMobile();
 
   return (
-    <div className={`header ${isMobile && MOB}`}>
+    <div className="header">
       <LogoHeader />
 
       {isMobile && <MenuButton callback={callback} open={menuOpen} />}

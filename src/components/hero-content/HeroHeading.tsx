@@ -1,10 +1,7 @@
-import { MAIN_HEADING, MOB } from "../../constants";
-import useIsMobile from "../../hooks/useIsMobile";
+import { MAIN_HEADING } from "../../constants";
 
 const HeroHeading = () => {
-  const isMobile = useIsMobile();
-
-  return <h1 className={`hero-heading ${isMobile && MOB}`}>{MAIN_HEADING}</h1>;
+  return <h1 className="hero-heading">{MAIN_HEADING}</h1>;
 };
 
 export default HeroHeading;

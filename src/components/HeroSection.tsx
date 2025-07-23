@@ -1,4 +1,4 @@
-import { HERO, MOB } from "../constants";
+import { HERO } from "../constants";
 import useIsMobile from "../hooks/useIsMobile";
 import Header from "./header/Header";
 import HeroBg from "./backgrounds/HeroBg";
@@ -14,7 +14,7 @@ const HeroSection = () => {
   const handleClick = useCallback(() => setMenuOpen((s) => !s), []);
 
   return (
-    <section id={HERO} className={`hero-section ${isMobile && MOB}`}>
+    <section id={HERO} className="hero-section">
       <Header callback={handleClick} menuOpen={menuOpen} />
 
       {isMobile && <BurgerMenu callback={handleClick} menuOpen={menuOpen} />}

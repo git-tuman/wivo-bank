@@ -1,4 +1,4 @@
-import { COLOR, FIND_OUT_MORE, GET_STARTED, MOB, SIZE } from "../../constants";
+import { COLOR, FIND_OUT_MORE, GET_STARTED, SIZE } from "../../constants";
 import useIsMobile from "../../hooks/useIsMobile";
 import ButtonPrimary from "../shared/ButtonPrimary";
 import ButtonSecondary from "../shared/ButtonSecondary";
@@ -9,7 +9,7 @@ const HeroContent = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className={`hero-content ${isMobile && MOB}`}>
+    <div className="hero-content">
       <HeroHeading />
 
       <div className="hero-info">

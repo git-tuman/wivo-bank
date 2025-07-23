@@ -1,4 +1,4 @@
-import { ACTIVE, MOB } from "../../constants";
+import { ACTIVE } from "../../constants";
 import useActiveHash from "../../hooks/useActiveHash";
 import useIsMobile from "../../hooks/useIsMobile";
 import { Nav } from "../../types";
@@ -12,7 +12,7 @@ const NavLink = ({ callback, value, href }: Nav) => {
     <span>
       <a
         className={`nav-link ${
-          isMobile && `${MOB} ${activeHash === href && ACTIVE}`
+          isMobile ? `${activeHash === href && ACTIVE}` : ""
         }`}
         href={href}
         onClick={callback}

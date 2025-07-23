@@ -1,12 +1,9 @@
-import { listNav, MOB } from "../../constants";
-import useIsMobile from "../../hooks/useIsMobile";
+import { listNav } from "../../constants";
 import NavLink from "./NavLink";
 
 const Navigation = ({ callback }: { callback?: () => void }) => {
-  const isMobile = useIsMobile();
-
   return (
-    <div className={`navigation ${isMobile && MOB}`}>
+    <div className="navigation">
       {listNav.map((nav) => (
         <NavLink callback={callback} key={nav.value} {...nav} />
       ))}

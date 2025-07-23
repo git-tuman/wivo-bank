@@ -6,6 +6,7 @@ $white-30: rgba(237, 245, 255, 0.3);
 $black: rgba(0, 0, 0, 1);
 $gray: rgba(48, 50, 54, 1);
 $light-gray: rgba(133, 136, 143, 1);
+$mob-max-width: 1023px;
 
 .App {
   color: $white;
@@ -20,9 +21,9 @@ $light-gray: rgba(133, 136, 143, 1);
   box-sizing: border-box;
   overflow: hidden;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     padding: 10px 20px;
-    height: 900px;
+    height: 969px;
   }
 }
 
@@ -36,7 +37,7 @@ $light-gray: rgba(133, 136, 143, 1);
   align-items: center;
   z-index: 0;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     inset: 0;
     align-items: end;
     right: 15%;
@@ -51,8 +52,8 @@ $light-gray: rgba(133, 136, 143, 1);
   height: 1311px;
   transform: translateX(3%);
 
-  &.mob {
-    bottom: -360px;
+  @media (max-width: $mob-max-width) {
+    bottom: -270px;
     width: 925px;
     height: auto;
     transform: translateX(1%);
@@ -66,11 +67,11 @@ $light-gray: rgba(133, 136, 143, 1);
   width: 563px;
   height: 775px;
 
-  &.mob {
-    bottom: -150px;
+  @media (max-width: $mob-max-width) {
+    bottom: -60px;
     width: 397px;
     height: 546px;
-    transform: translateX(-6%);
+    transform: translateX(-5.5%);
   }
 }
 
@@ -87,7 +88,7 @@ $light-gray: rgba(133, 136, 143, 1);
   backdrop-filter: blur(16px);
   box-shadow: 0px 4px 20px 0px rgba(126, 119, 160, 0.1);
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     padding: 10px 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -98,7 +99,7 @@ $light-gray: rgba(133, 136, 143, 1);
   width: 136px;
   height: 22px;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     width: 80px;
     height: 22px;
     z-index: 5;
@@ -114,7 +115,7 @@ $light-gray: rgba(133, 136, 143, 1);
   gap: 32px;
   justify-content: space-between;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     gap: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -128,7 +129,7 @@ $light-gray: rgba(133, 136, 143, 1);
   text-decoration: none;
   color: $white;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     font-size: 60px;
     line-height: 94%;
   }
@@ -238,7 +239,7 @@ $light-gray: rgba(133, 136, 143, 1);
   justify-content: space-between;
   z-index: 1;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     margin: 0;
     width: 100%;
     justify-content: start;
@@ -253,7 +254,7 @@ $light-gray: rgba(133, 136, 143, 1);
   margin: 0;
   margin-top: 110px;
 
-  &.mob {
+  @media (max-width: $mob-max-width) {
     margin-top: 70px;
     font-size: 60px;
     line-height: 94%;
