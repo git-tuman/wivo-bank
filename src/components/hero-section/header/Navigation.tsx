@@ -1,4 +1,4 @@
-import { listNav } from "../../constants";
+import { listNav } from "../../../constants";
 import NavLink from "./NavLink";
 
 const Navigation = ({ callback }: { callback?: () => void }) => {

@@ -1,9 +1,9 @@
-import useIsMobile from "../../hooks/useIsMobile";
+import useIsMobile from "../../../hooks/useIsMobile";
 import LogoHeader from "./LogoHeader";
-import { GET_STARTED, SIZE } from "../../constants";
+import { GET_STARTED, SIZE } from "../../../constants";
 import MenuButton from "./MenuButton";
 import Navigation from "./Navigation";
-import ButtonTertiary from "../shared/ButtonTertiary";
+import ButtonTertiary from "../../shared/ButtonTertiary";
 
 const Header = ({
   callback,

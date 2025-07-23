@@ -1,5 +1,5 @@
-import { HERO_PARAGRAPH, HERO_PARAGRAPH_MOB } from "../../constants";
-import useIsMobile from "../../hooks/useIsMobile";
+import { HERO_PARAGRAPH, HERO_PARAGRAPH_MOB } from "../../../constants";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 const HeroParagraph = () => {
   const isMobile = useIsMobile();

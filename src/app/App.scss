@@ -124,14 +124,17 @@ $mob-max-width: 1023px;
 }
 
 .nav-link {
+  font-family: Inter;
   font-size: 18px;
   line-height: 135%;
+  letter-spacing: 0%;
   text-decoration: none;
   color: $white;
 
   @media (max-width: $mob-max-width) {
     font-size: 60px;
     line-height: 94%;
+    letter-spacing: -5.5%;
   }
 
   &.active {
@@ -192,8 +195,11 @@ $mob-max-width: 1023px;
 }
 
 .disclaimer {
+  font-family: Inter;
+  font-weight: 500;
   font-size: 14px;
   line-height: 150%;
+  letter-spacing: 0%;
   color: $light-gray;
 }
 
@@ -207,14 +213,19 @@ $mob-max-width: 1023px;
 
   &.S {
     padding: 6px 12px 6px 12px;
+    font-family: Inter;
     font-size: 14px;
     line-height: 135%;
+    letter-spacing: 0%;
   }
 
   &.M {
     padding: 6px 14px 6px 14px;
+    font-family: Inter;
+    font-weight: 500;
     font-size: 18px;
     line-height: 135%;
+    letter-spacing: 0%;
   }
 
   &:hover {
@@ -233,7 +244,7 @@ $mob-max-width: 1023px;
 .hero-content {
   display: flex;
   gap: 32px;
-  width: 38%;
+  width: 40%;
   justify-content: end;
   flex-direction: column;
   justify-content: space-between;
@@ -247,7 +258,7 @@ $mob-max-width: 1023px;
 }
 
 .hero-heading {
-  font-weight: 500;
+  font-family: Inter;
   font-size: 96px;
   line-height: 94%;
   letter-spacing: -5.5%;
@@ -255,14 +266,14 @@ $mob-max-width: 1023px;
   margin-top: 110px;
 
   @media (max-width: $mob-max-width) {
-    margin-top: 70px;
     font-size: 60px;
     line-height: 94%;
+    margin-top: 70px;
   }
 }
 
 .hero-paragraph {
-  font-weight: 500;
+  font-family: Inter;
   font-size: 18px;
   line-height: 135%;
   letter-spacing: 0%;
@@ -274,8 +285,10 @@ $mob-max-width: 1023px;
   z-index: 5;
   border-radius: 80px;
   transition: background 0.3s;
+  font-family: Inter;
   font-size: 18px;
   line-height: 135%;
+  letter-spacing: 0%;
 
   &.S {
     padding: 13px 24px 14px 24px;
@@ -309,8 +322,10 @@ $mob-max-width: 1023px;
   z-index: 5;
   border-radius: 80px;
   transition: background 0.3s;
+  font-family: Inter;
   font-size: 18px;
   line-height: 135%;
+  letter-spacing: 0%;
 
   &.S {
     padding: 17px 28px 18px 28px;
@@ -334,4 +349,71 @@ $mob-max-width: 1023px;
 .container-hero-btns {
   display: flex;
   gap: 10px;
+}
+
+.marquee-section {
+  background: $black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  height: 259px;
+  color: $light-gray;
+  gap: 60px;
+
+  @media (max-width: $mob-max-width) {
+    height: 202px;
+    gap: 20px;
+  }
+}
+
+.marquee-paragraph {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: center;
+    margin: 0;
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+
+    @media (max-width: $mob-max-width) {
+      font-size: 16px;
+      line-height: 140%;
+      width: 254px;
+      height: 44px;
+    }
+  }
+}
+
+.marquee {
+  height: 92px;
+  display: flex;
+  gap: 110px;
+  animation: marquee-scroll 40s linear infinite;
+
+  a {
+    cursor: pointer;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: $mob-max-width) {
+    gap: 40px;
+  }
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

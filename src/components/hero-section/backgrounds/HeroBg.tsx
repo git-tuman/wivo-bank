@@ -1,8 +1,8 @@
-import useIsMobile from "../../hooks/useIsMobile";
-import GlassPromo from "../../assets/glass-promo.png";
-import GlassPromoMob from "../../assets/glass-promo-mob.png";
-import HandPromo from "../../assets/hand-promo.png";
-import HandPromoMob from "../../assets/hand-promo-mob.png";
+import useIsMobile from "../../../hooks/useIsMobile";
+import GlassPromo from "../../../assets/glass-promo.png";
+import GlassPromoMob from "../../../assets/glass-promo-mob.png";
+import HandPromo from "../../../assets/hand-promo.png";
+import HandPromoMob from "../../../assets/hand-promo-mob.png";
 
 const HeroBg = () => {
   const isMobile = useIsMobile();

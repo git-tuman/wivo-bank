@@ -7,7 +7,8 @@ export const listNav: Nav[] = [
   { value: "FAQs", href: "#FAQs" },
 ];
 
-export const HERO = "hero";
+export const HERO = "Hero";
+export const MARQUEE = "Marquee";
 
 export const ACTIVE = "active";
 
@@ -20,6 +21,9 @@ export const COLOR = {
   WHITE: "white",
   BLACK: "black",
 };
+
+export const LINK_BONO = "https://www.bono.digital";
+export const MARQUEE_PARAGRAPH = "Used by the world's most amazing companies";
 
 export const COPYRIGHT = "Ⓒ 2025 WIVO Finance Inc. All rights reserved.";
 export const GET_STARTED = "Get started";

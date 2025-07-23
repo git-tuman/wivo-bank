@@ -1,5 +1,5 @@
-import Burger from "../../assets/burger.svg";
-import Close from "../../assets/close.svg";
+import Burger from "../../../assets/burger.svg";
+import Close from "../../../assets/close.svg";
 
 interface MenuBtn {
   callback: () => void;

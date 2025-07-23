@@ -1,5 +1,5 @@
-import { HERO } from "../constants";
-import useIsMobile from "../hooks/useIsMobile";
+import { HERO } from "../../constants";
+import useIsMobile from "../../hooks/useIsMobile";
 import Header from "./header/Header";
 import HeroBg from "./backgrounds/HeroBg";
 import BurgerMenu from "./header/BurgerMenu";

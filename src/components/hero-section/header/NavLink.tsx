@@ -1,7 +1,7 @@
-import { ACTIVE } from "../../constants";
-import useActiveHash from "../../hooks/useActiveHash";
-import useIsMobile from "../../hooks/useIsMobile";
-import { Nav } from "../../types";
+import { ACTIVE } from "../../../constants";
+import useActiveHash from "../../../hooks/useActiveHash";
+import useIsMobile from "../../../hooks/useIsMobile";
+import { Nav } from "../../../types";
 
 const NavLink = ({ callback, value, href }: Nav) => {
   const isMobile = useIsMobile();

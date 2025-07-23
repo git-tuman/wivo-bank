@@ -1,8 +1,8 @@
-import useIsMobile from "../../hooks/useIsMobile";
-import logoHeader from "../../assets/logo-header.svg";
-import logoHeaderMob from "../../assets/logo-header-mob.svg";
+import useIsMobile from "../../../hooks/useIsMobile";
+import logoHeader from "../../../assets/logo-header.svg";
+import logoHeaderMob from "../../../assets/logo-header-mob.svg";
 import { useCallback } from "react";
-import { HERO } from "../../constants";
+import { HERO } from "../../../constants";
 
 const LogoHeader = () => {
   const isMobile = useIsMobile();

@@ -1,7 +1,7 @@
-import { COLOR, FIND_OUT_MORE, GET_STARTED, SIZE } from "../../constants";
-import useIsMobile from "../../hooks/useIsMobile";
-import ButtonPrimary from "../shared/ButtonPrimary";
-import ButtonSecondary from "../shared/ButtonSecondary";
+import { COLOR, FIND_OUT_MORE, GET_STARTED, SIZE } from "../../../constants";
+import useIsMobile from "../../../hooks/useIsMobile";
+import ButtonPrimary from "../../shared/ButtonPrimary";
+import ButtonSecondary from "../../shared/ButtonSecondary";
 import HeroHeading from "./HeroHeading";
 import HeroParagraph from "./HeroParagraph";
 
