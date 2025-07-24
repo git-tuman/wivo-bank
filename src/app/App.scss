@@ -471,14 +471,19 @@ $mob-max-width: 1023px;
 }
 
 .hand-with-card {
-  animation: handEnter 1s ease-out forwards;
+  opacity: 0;
 
-  @media (max-width: $mob-max-width) {
-    animation: handEnterMob 1s ease-out forwards;
+  &.animate {
+    opacity: 1;
+    animation: handEnter 1s ease-out forwards;
 
-    position: relative;
-    width: 564px;
-    transform: none;
+    @media (max-width: $mob-max-width) {
+      animation: handEnterMob 1s ease-out forwards;
+
+      position: relative;
+      width: 564px;
+      transform: none;
+    }
   }
 }
 
