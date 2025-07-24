@@ -20,6 +20,7 @@ export const LIST_COMPANIES: Company[] = [
 
 export const HERO = "Hero";
 export const MARQUEE = "Marquee";
+export const CARD = "Card";
 
 export const ACTIVE = "active";
 

@@ -14,11 +14,12 @@ $mob-max-width: 1023px;
 
 .hero-section {
   position: relative;
-  height: 100vh;
-  display: flex;
   background: $gradient;
-  padding: 30px 50px;
+  padding: 40px;
   box-sizing: border-box;
+  display: flex;
+  height: 800px;
+  justify-content: space-between;
   overflow: hidden;
 
   @media (max-width: $mob-max-width) {
@@ -30,48 +31,40 @@ $mob-max-width: 1023px;
 .hero-bg {
   pointer-events: none;
   position: absolute;
-  right: 35%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  right: 0;
   z-index: 0;
 
   @media (max-width: $mob-max-width) {
-    inset: 0;
-    align-items: end;
-    right: 15%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .glass-promo {
-  bottom: -290px;
   position: absolute;
-  object-fit: cover;
-  width: 1311px;
-  height: 1311px;
-  transform: translateX(3%);
+  transform: translateX(-90%) translateY(-23%);
 
   @media (max-width: $mob-max-width) {
-    bottom: -270px;
-    width: 925px;
-    height: auto;
-    transform: translateX(1%);
+    bottom: 0;
+    transform: translateX(-2.5%) translateY(25%);
   }
 }
 
 .hand-promo {
   position: absolute;
-  object-fit: cover;
-  bottom: -80px;
   width: 563px;
   height: 775px;
+  transform: translateX(-140%) translateY(9%);
 
   @media (max-width: $mob-max-width) {
-    bottom: -60px;
+    bottom: 0;
     width: 397px;
     height: 546px;
-    transform: translateX(-5.5%);
+    transform: translateX(-14%) translateY(11%);
   }
 }
 
@@ -80,13 +73,12 @@ $mob-max-width: 1023px;
   top: 0;
   left: 0;
   right: 0;
-  padding: 30px 50px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 5;
   backdrop-filter: blur(16px);
-  box-shadow: 0px 4px 20px 0px rgba(126, 119, 160, 0.1);
 
   @media (max-width: $mob-max-width) {
     padding: 10px 20px;
@@ -245,7 +237,8 @@ $mob-max-width: 1023px;
   display: flex;
   gap: 32px;
   width: 40%;
-  justify-content: end;
+  height: 100%;
+  // justify-content: start;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
@@ -259,11 +252,12 @@ $mob-max-width: 1023px;
 
 .hero-heading {
   font-family: Inter;
+  font-weight: 500;
   font-size: 96px;
   line-height: 94%;
   letter-spacing: -5.5%;
   margin: 0;
-  margin-top: 110px;
+  margin-top: 90px;
 
   @media (max-width: $mob-max-width) {
     font-size: 60px;
@@ -366,13 +360,13 @@ $mob-max-width: 1023px;
   }
 }
 
-.marquee-paragraph {
+.marquee-content {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  p {
+  caption {
     text-align: center;
     margin: 0;
     font-family: Inter;
@@ -440,5 +434,131 @@ $mob-max-width: 1023px;
     rotate: none;
     scale: none;
     transform: translate3d(-100%, 0px, 0px);
+  }
+}
+
+.card-section {
+  position: relative;
+  height: 828px;
+  background: $black;
+  display: flex;
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+
+  @media (max-width: $mob-max-width) {
+    padding: 0;
+    height: 798px;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+  }
+}
+
+.card-bg {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+
+  @media (max-width: $mob-max-width) {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hand-with-card {
+  animation: handEnter 1s ease-out forwards;
+
+  @media (max-width: $mob-max-width) {
+    animation: handEnterMob 1s ease-out forwards;
+
+    position: relative;
+    width: 564px;
+    transform: none;
+  }
+}
+
+@keyframes handEnter {
+  0% {
+    transform: translateX(-100%) translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-27%) translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes handEnterMob {
+  0% {
+    transform: translateX(-100%) translateY(30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-30%) translateY(0%);
+    opacity: 1;
+  }
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  z-index: 1;
+  gap: 60px;
+
+  @media (max-width: $mob-max-width) {
+    padding-top: 120px;
+    width: 100%;
+    gap: 32px;
+  }
+
+  h2 {
+    color: $white;
+    font-family: Inter;
+    font-size: 72px;
+    line-height: 94%;
+    letter-spacing: -5.5%;
+    margin: 0;
+    max-width: 800px;
+
+    .accent {
+      color: $light-gray;
+    }
+
+    @media (max-width: $mob-max-width) {
+      font-family: Inter;
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 94%;
+      letter-spacing: -5.5%;
+      text-align: center;
+    }
+  }
+
+  p {
+    color: $light-gray;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0%;
+    width: 78%;
+    margin: 0;
+
+    @media (max-width: $mob-max-width) {
+      padding: 10px;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 135%;
+      letter-spacing: 0%;
+      text-align: center;
+      width: auto;
+    }
   }
 }
