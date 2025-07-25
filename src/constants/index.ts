@@ -1,10 +1,16 @@
 import { Company, Nav } from "../types";
 import BonoLogo from "../assets/bono_logo.svg";
 
+export const HERO = "Hero";
+export const MARQUEE = "Marquee";
+export const CARD = "Card";
+export const APP = "App";
+export const CUSTOMIZE = "Customize";
+
 export const listNav: Nav[] = [
-  { value: "Card", href: "#Card" },
-  { value: "App", href: "#App" },
-  { value: "Customize", href: "#Customize" },
+  { value: CARD, href: `#${CARD}` },
+  { value: APP, href: `#${APP}` },
+  { value: CUSTOMIZE, href: `#${CUSTOMIZE}` },
   { value: "FAQs", href: "#FAQs" },
 ];
 
@@ -17,12 +23,6 @@ export const LIST_COMPANIES: Company[] = [
   { name: "Bono", logo: BonoLogo, link: LINK_BONO },
   { name: "Bono", logo: BonoLogo, link: LINK_BONO },
 ];
-
-export const HERO = "Hero";
-export const MARQUEE = "Marquee";
-export const CARD = "Card";
-export const APP = "App";
-export const CUSTOMIZE = "Customize";
 
 export const ACTIVE = "active";
 
