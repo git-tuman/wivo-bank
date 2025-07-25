@@ -19,9 +19,9 @@ const HeroSection = () => {
 
       {isMobile && <BurgerMenu callback={handleClick} menuOpen={menuOpen} />}
 
-      <HeroBg />
-
       <HeroContent />
+
+      <HeroBg />
     </section>
   );
 };

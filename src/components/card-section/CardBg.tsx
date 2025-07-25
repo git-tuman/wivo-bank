@@ -1,7 +1,7 @@
-import useIsMobile from "../../../hooks/useIsMobile";
-import HandWithCard from "../../../assets/hand-with-card.png";
-import HandWithCardMob from "../../../assets/hand-with-card-mob.png";
+import HandWithCard from "../../assets/hand-with-card.png";
+import HandWithCardMob from "../../assets/hand-with-card-mob.png";
 import { useEffect, useRef, useState } from "react";
+import useIsMobile from "../../hooks/useIsMobile";
 
 const CardBg = () => {
   const isMobile = useIsMobile();
