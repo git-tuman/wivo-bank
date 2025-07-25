@@ -22,6 +22,7 @@ export const HERO = "Hero";
 export const MARQUEE = "Marquee";
 export const CARD = "Card";
 export const APP = "App";
+export const CUSTOMIZE = "Customize";
 
 export const ACTIVE = "active";
 
@@ -58,3 +59,8 @@ export const APP_TOOLTIP_BALANCE_PARAGRAPH = "Financial control";
 export const APP_TOOLTIP_BALANCE_SPAN = "Improving visibility of transactions";
 export const APP_TOOLTIP_BUTTON_PARAGRAPH = "Easily get paid";
 export const APP_TOOLTIP_BUTTON_SPAN = "Make payments in a few minutes";
+
+export const CUSTOMIZE_HEADING =
+  "Get noticed with a custom card to fit your style";
+export const CUSTOMIZE_PARAGRAPH =
+  "Stand out from the crowd by not settling for a boring bank card. Choose a card color that reflects your style, and the app will adapt to match it.";

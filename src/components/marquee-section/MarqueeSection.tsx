@@ -1,11 +1,11 @@
 import { MARQUEE } from "../../constants";
 import Marquee from "./Marquee";
-import MarqueeCaption from "./MarqueeCaption";
+import MarqueeParagraph from "./MarqueeParagraph";
 
 const MarqueeSection = () => {
   return (
     <section id={MARQUEE} className="marquee-section">
-      <MarqueeCaption />
+      <MarqueeParagraph />
 
       <Marquee />
     </section>
