@@ -15,13 +15,15 @@ const HeroSection = () => {
 
   return (
     <section id={HERO} className="hero-section">
-      <Header callback={handleClick} menuOpen={menuOpen} />
+      <div className="hero-conatiner">
+        <Header callback={handleClick} menuOpen={menuOpen} />
 
-      {isMobile && <BurgerMenu callback={handleClick} menuOpen={menuOpen} />}
+        {isMobile && <BurgerMenu callback={handleClick} menuOpen={menuOpen} />}
 
-      <HeroContent />
+        <HeroContent />
 
-      <HeroBg />
+        <HeroBg />
+      </div>
     </section>
   );
 };

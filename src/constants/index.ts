@@ -1,4 +1,4 @@
-import { Company, Nav } from "../types";
+import { Company, ItemAccordion, Nav } from "../types";
 import BonoLogo from "../assets/bono_logo.svg";
 
 export const HERO = "Hero";
@@ -6,6 +6,7 @@ export const MARQUEE = "Marquee";
 export const CARD = "Card";
 export const APP = "App";
 export const CUSTOMIZE = "Customize";
+export const FAQS = "FAQs";
 
 export const listNav: Nav[] = [
   { value: CARD, href: `#${CARD}` },
@@ -22,6 +23,29 @@ export const LIST_COMPANIES: Company[] = [
   { name: "Bono", logo: BonoLogo, link: LINK_BONO },
   { name: "Bono", logo: BonoLogo, link: LINK_BONO },
   { name: "Bono", logo: BonoLogo, link: LINK_BONO },
+];
+
+export const LIST_ACCORDION_ITEMS: ItemAccordion[] = [
+  {
+    head: "How can I sign up?",
+    info: "Signing up for WIVO is quick and easy. Simply download the app from the App Store or Google Play, follow the on-screen instructions to create an account, and start managing your finances.",
+  },
+  {
+    head: "How does WIVO work?",
+    info: "WIVO is a user-friendly mobile app that allows you to easily manage your finances, track your spending, and set financial goals. It provides personalized insights and recommendations to help you make informed financial decisions.",
+  },
+  {
+    head: "Can I link multiple accounts?",
+    info: "Yes, you can link multiple accounts to WIVO. This allows you to have a comprehensive view of your finances and easily track your spending across different accounts.",
+  },
+  {
+    head: "How can I track my expenses?",
+    info: "WIVO provides powerful expense tracking tools that categorize your transactions automatically. You can also set spending limits and receive notifications when you're nearing your budget.",
+  },
+  {
+    head: "Can I set financial goals?",
+    info: "Yes, WIVO allows you to set financial goals and track your progress. Whether you're saving for a vacation, a new car, or retirement, WIVO can help you stay on track and achieve your goals.",
+  },
 ];
 
 export const ACTIVE = "active";
@@ -64,3 +88,7 @@ export const CUSTOMIZE_HEADING =
   "Get noticed with a custom card to fit your style";
 export const CUSTOMIZE_PARAGRAPH =
   "Stand out from the crowd by not settling for a boring bank card. Choose a card color that reflects your style, and the app will adapt to match it.";
+
+export const FAQS_HEADING = "FAQs";
+export const FAQS_PARAGRAPH = "Don’t see your question here?";
+export const GET_IN_TOUCH = "Get in touch ➔";

@@ -20,3 +20,8 @@ export interface Company {
   logo: string;
   link: string;
 }
+
+export interface ItemAccordion {
+  head: string;
+  info: string;
+}

@@ -3,11 +3,13 @@ $white: rgba(255, 255, 255, 1);
 $white-10: rgba(237, 245, 255, 0.1);
 $white-20: rgba(237, 245, 255, 0.2);
 $white-30: rgba(237, 245, 255, 0.3);
+$white-60: rgba(237, 245, 255, 0.6);
 $black: rgba(0, 0, 0, 1);
 $black-30: rgba(0, 0, 0, 0.3);
 $light-black: rgba(19, 19, 20, 1);
 $gray: rgba(48, 50, 54, 1);
 $light-gray: rgba(133, 136, 143, 1);
+$max-width: 1360px;
 $mob-max-width: 1023px;
 $blur: blur(24px);
 
@@ -16,19 +18,26 @@ $blur: blur(24px);
 }
 
 .hero-section {
-  position: relative;
   background: $gradient;
   padding: 40px;
   box-sizing: border-box;
   display: flex;
   height: 800px;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
 
   @media (max-width: $mob-max-width) {
     padding: 10px 20px;
     height: 969px;
   }
+}
+
+.hero-conatiner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $max-width;
 }
 
 .hero-bg {
@@ -42,8 +51,6 @@ $blur: blur(24px);
     position: absolute;
     bottom: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -52,7 +59,7 @@ $blur: blur(24px);
 
   @media (max-width: $mob-max-width) {
     bottom: 0;
-    transform: translateX(-5%) translateY(24%);
+    transform: translateX(-3%) translateY(24%);
   }
 }
 
@@ -66,7 +73,7 @@ $blur: blur(24px);
     bottom: 0;
     width: 397px;
     height: 546px;
-    transform: translateX(-19%) translateY(10%);
+    transform: translateX(-13.5%) translateY(10%);
   }
 }
 
@@ -369,6 +376,8 @@ $blur: blur(24px);
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0%;
+  font-family: Inter;
+  text-align: center;
 
   @media (max-width: $mob-max-width) {
     font-size: 16px;
@@ -433,16 +442,30 @@ $blur: blur(24px);
 }
 
 .card-section {
-  position: relative;
   height: 828px;
   background: $black;
   display: flex;
   padding: 40px;
   box-sizing: border-box;
-  align-items: center;
   overflow: hidden;
+  justify-content: center;
 
+  @media (max-width: $mob-max-width) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0;
+    height: 798px;
+    justify-content: end;
+  }
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: $max-width;
 
   @media (max-width: $mob-max-width) {
     flex-direction: column-reverse;
@@ -462,13 +485,14 @@ $blur: blur(24px);
   z-index: 0;
 
   @media (max-width: $mob-max-width) {
-    // bottom: 0;
     width: 100%;
   }
 }
 
 .hand-with-card {
   opacity: 0;
+  mask-image: linear-gradient(to left, black 70%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to left, black 70%, transparent 90%);
 
   &.animate {
     opacity: 1;
@@ -566,6 +590,7 @@ $blur: blur(24px);
   display: flex;
   padding: 0 40px;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   height: 640px;
   box-sizing: border-box;
@@ -584,6 +609,7 @@ $blur: blur(24px);
   padding: 64px;
   box-sizing: border-box;
   display: flex;
+  max-width: $max-width;
 
   @media (max-width: $mob-max-width) {
     padding: 0 20px;
@@ -834,4 +860,199 @@ $blur: blur(24px);
       transform: translateX(0%) translateY(-15%);
     }
   }
+}
+
+.faqs-section {
+  background: $black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1315px;
+  box-sizing: border-box;
+  padding: 40px;
+
+  @media (max-width: $mob-max-width) {
+    padding: 20px;
+    height: 1001px;
+  }
+}
+
+.faqs-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: $max-width;
+
+  @media (max-width: $mob-max-width) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
+.faqs-content-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 50px;
+
+  @media (max-width: $mob-max-width) {
+    width: 100%;
+    gap: 32px;
+  }
+}
+
+.faqs-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 50px;
+
+  @media (max-width: $mob-max-width) {
+    width: 100%;
+  }
+
+  h2 {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 72px;
+    line-height: 94%;
+    letter-spacing: -0.02em;
+    color: $white;
+    margin: 0;
+
+    @media (max-width: $mob-max-width) {
+      font-size: 48px;
+    }
+  }
+
+  p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0%;
+    color: $light-gray;
+    margin: 0;
+  }
+}
+
+.special-link {
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: 0%;
+
+  background: linear-gradient(
+    338.26deg,
+    #8fc1ff -41.31%,
+    #bae8f5 51.47%,
+    #b8faf2 123.84%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  text-decoration: none;
+
+  &:hover {
+    background: none;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: $white-60;
+    color: $white-60;
+  }
+}
+
+.faqs-accordion-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+
+  @media (max-width: $mob-max-width) {
+    gap: 10px;
+  }
+}
+
+.accordion-item-container {
+  display: flex;
+  justify-content: space-between;
+  background: $light-black;
+  border-radius: 24px;
+  padding: 32px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: $mob-max-width) {
+    padding: 16px;
+  }
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 67%;
+
+  .accordion-content {
+    max-height: 0;
+    padding-top: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding-top: 0;
+  }
+
+  &.active .accordion-content {
+    padding-top: 32px;
+  }
+
+  @media (max-width: $mob-max-width) {
+    width: 100%;
+  }
+
+  h3 {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0%;
+
+    color: $white;
+    margin: 0;
+
+    @media (max-width: $mob-max-width) {
+      font-size: 18px;
+      line-height: 135%;
+    }
+  }
+
+  p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0%;
+
+    color: $light-gray;
+    margin: 0;
+
+    @media (max-width: $mob-max-width) {
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}
+
+.accordion-item-button {
+  background: none;
+  border: none;
+  padding: 0;
 }

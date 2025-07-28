@@ -4,6 +4,7 @@ import MarqueeSection from "../components/marquee-section/MarqueeSection";
 import CardSection from "../components/card-section/CardSection";
 import AppSection from "../components/app-section/AppSection";
 import CustomizeSection from "../components/customize-section/CustomizeSection";
+import FAQsSection from "../components/FAQs-section/FAQsSection";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <AppSection />
 
       <CustomizeSection />
+
+      <FAQsSection />
     </div>
   );
 }
