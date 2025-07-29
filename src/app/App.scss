@@ -9,8 +9,8 @@ $black-30: rgba(0, 0, 0, 0.3);
 $light-black: rgba(19, 19, 20, 1);
 $gray: rgba(48, 50, 54, 1);
 $light-gray: rgba(133, 136, 143, 1);
-$max-width: 1360px;
-$mob-max-width: 1023px;
+$max-width: 1840px;
+$mob-max-width: 440px;
 $blur: blur(20px);
 
 .App {
@@ -853,11 +853,29 @@ $blur: blur(20px);
   .customize-glass-cards {
     position: absolute;
     width: 100%;
+    max-width: $max-width + 80px;
     transform: translateY(-13%);
 
     @media (max-width: $mob-max-width) {
       width: 170%;
       transform: translateX(0%) translateY(-15%);
+    }
+
+    @media (min-width: ($max-width + 81px)) {
+      mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+      );
+      -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+      );
     }
   }
 }
