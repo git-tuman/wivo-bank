@@ -1,10 +1,11 @@
-import HeroSection from "../components/hero-section/HeroSection";
+import HeroSection from "../widgets/hero-section/HeroSection";
 import "./App.scss";
-import MarqueeSection from "../components/marquee-section/MarqueeSection";
-import CardSection from "../components/card-section/CardSection";
-import AppSection from "../components/app-section/AppSection";
-import CustomizeSection from "../components/customize-section/CustomizeSection";
-import FAQsSection from "../components/FAQs-section/FAQsSection";
+import MarqueeSection from "../widgets/marquee-section/MarqueeSection";
+import CardSection from "../widgets/card-section/CardSection";
+import AppSection from "../widgets/app-section/AppSection";
+import CustomizeSection from "../widgets/customize-section/CustomizeSection";
+import FAQsSection from "../widgets/FAQs-section/FAQsSection";
+import FooterSection from "../widgets/footer-section/FooterSection";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <CustomizeSection />
 
       <FAQsSection />
+
+      <FooterSection />
     </div>
   );
 }
