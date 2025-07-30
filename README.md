@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# WIVO Bank
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Одностраничный лендинг, реализованный в рамках тестового задания.  
+Проект выполнен с упором на **пиксель-перфект**, адаптивную верстку, анимации и быструю загрузку.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Деплой
 
-### `npm start`
+[GitHub Pages](https://git-tuman.github.io/wivo-bank/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Стек технологий
 
-### `npm test`
+- **React 19** + **TypeScript**
+- **SCSS**
+- **Webpack**
+- **FSD-архитектура (минимальная реализация: shared + widgets)**
+- **IntersectionObserver API**
+- **Адаптивная верстка**
+- **Lazy loading изображений**
+- **CSS-анимации (SCSS)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Функционал и особенности
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Верстка и адаптив
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Pixel perfect по макету Figma.
+- Поддержка экранов:
+  - **Mobile:** до `440px`
+  - **Desktop:** `1920px` (фиксированная ширина при >1920px, центрирование)
+- Резиновая верстка для промежуточных разрешений.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Навигация
 
-### `npm run eject`
+- Хедер с адаптивным меню.
+- На мобильных устройствах — бургер-меню с выпадающим окном.
+- Активный пункт навигации подсвечивается в зависимости от текущей видимой секции на экране, подхватывается через кастомный хук `useActiveSection` с `IntersectionObserver`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Производительность
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Время загрузки ~**500ms**.
+- Ленивая загрузка изображений с помощью `loading="lazy"`.
+- Минимизация стилей и скриптов.
+- Семантическая разметка.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Анимации
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Реализованы анимации переходов и появления элементов на основе макета.
+- SCSS-анимации и переходы.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Архитектура проекта (минимальный FSD)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+src
+├── app
+│ ├── App.scss
+│ └── App.tsx
+├── shared # Переиспользуемые модули
+│ ├── ui
+│ ├── hooks
+│ ├── assets
+│ ├── constants
+│ ├── utils
+│ └── types
+├── widgets # Основные секции лендинга
+│ ├── hero-section
+│ ├── marquee-section
+│ ├── card-section
+│ └── ...
+
+---
+
+## Как запустить проект локально
+
+```bash
+# Клонировать репозиторий
+git clone https://github.com/git-tuman/wivo-bank.git
+
+# Перейти в папку проекта
+cd wivo-bank
+
+# Установить зависимости
+npm install
+
+# Запустить в режиме разработки
+npm start
+```
