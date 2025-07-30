@@ -54,27 +54,6 @@
 
 ---
 
-## Архитектура проекта (минимальный FSD)
-
-src
-├── app
-│ ├── App.scss
-│ └── App.tsx
-├── shared # Переиспользуемые модули
-│ ├── ui
-│ ├── hooks
-│ ├── assets
-│ ├── constants
-│ ├── utils
-│ └── types
-├── widgets # Основные секции лендинга
-│ ├── hero-section
-│ ├── marquee-section
-│ ├── card-section
-│ └── ...
-
----
-
 ## Как запустить проект локально
 
 ```bash
