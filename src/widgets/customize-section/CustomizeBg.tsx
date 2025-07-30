@@ -13,12 +13,14 @@ const CustomizeBg = () => {
         className="customize-cards"
         src={isMobile ? CardsMob : Cards}
         alt="cards"
+        loading="lazy"
       />
 
       <img
         className="customize-glass-cards"
         src={isMobile ? GlassCardsMob : GlassCards}
         alt="glass cards"
+        loading="lazy"
       />
     </div>
   );

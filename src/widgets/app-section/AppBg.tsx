@@ -14,7 +14,11 @@ const AppBg = () => {
   return (
     <div className="app-bg">
       <div className="container-phone-screen">
-        <img src={isMobile ? PhoneScreenMob : PhoneScreen} alt="phone screen" />
+        <img
+          src={isMobile ? PhoneScreenMob : PhoneScreen}
+          alt="phone screen"
+          loading="lazy"
+        />
 
         <div className="tooltip balance">
           <p>{APP_TOOLTIP_BALANCE_PARAGRAPH}</p>

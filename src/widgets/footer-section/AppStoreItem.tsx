@@ -12,7 +12,7 @@ const AppStoreItem = ({ item }: TypeAppStoreItem) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img src={item.logo} alt={item.name} />
+      <img src={item.logo} alt={item.name} loading="lazy" />
     </a>
   );
 };

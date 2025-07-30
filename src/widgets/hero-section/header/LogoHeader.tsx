@@ -17,6 +17,7 @@ const LogoHeader = () => {
       alt="logo WIVO Bank"
       className="logo-header"
       onClick={handleClick}
+      loading="lazy"
     />
   );
 };

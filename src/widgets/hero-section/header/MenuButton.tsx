@@ -9,7 +9,7 @@ interface MenuBtn {
 const MenuButton = ({ callback, open }: MenuBtn) => {
   return (
     <button onClick={callback} className="button-menu">
-      <img src={open ? Close : Burger} alt="Button Menu" />
+      <img src={open ? Close : Burger} alt="Button Menu" loading="lazy" />
     </button>
   );
 };

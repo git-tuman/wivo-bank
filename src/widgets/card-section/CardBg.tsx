@@ -33,6 +33,7 @@ const CardBg = () => {
         className={`hand-with-card ${inView ? "animate" : ""}`}
         src={isMobile ? HandWithCardMob : HandWithCard}
         alt="debit card"
+        loading="lazy"
       />
     </div>
   );

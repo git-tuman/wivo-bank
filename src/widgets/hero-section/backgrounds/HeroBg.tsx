@@ -13,12 +13,14 @@ const HeroBg = () => {
         className="glass-promo"
         src={isMobile ? GlassPromoMob : GlassPromo}
         alt="glass promo"
+        loading="lazy"
       />
 
       <img
         className="hand-promo"
         src={isMobile ? HandPromoMob : HandPromo}
         alt="hand promo"
+        loading="lazy"
       />
     </div>
   );

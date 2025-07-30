@@ -44,7 +44,7 @@ const AccordionItem = ({ item, active, callback }: TypeAccordionItem) => {
 
       <div>
         <button className="accordion-item-button">
-          <img src={icon} alt="dropdown arrow" />
+          <img src={icon} alt="dropdown arrow" loading="lazy" />
         </button>
       </div>
     </div>
